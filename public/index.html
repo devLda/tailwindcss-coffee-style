@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./img/favicon/coffee-cup-logo.jpg" sizes="16x16">
   <title>Coffee Style</title>
-  <link href="./output.css" type="text/css" rel="stylesheet">
-  <script src="./main.js" type="text/javascript" async></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link href="output.css" type="text/css" rel="stylesheet">
 </head>
 <body>
   <div id="root">
@@ -37,7 +37,10 @@
               <a href="#" class="">StyleGuide</a>
             </li>
             <li class="lda-top-menu-item lda-top-menu-item-active">
-              <a href="#" target="blank" class="">AnhOct</a>
+                <a href="#" target="blank" id="login">Login</a>
+            </li>
+            <li class="lda-top-menu-item">
+                <a href="#" target="blank" id="signup">Signup</a>
             </li>
           </ul>
 
@@ -59,7 +62,65 @@
             </svg>
           </div>
         </nav>
+        <!-- Login -->
+        <div id="box-login">
+          <div id="modal-box-login">
+            <div class="form">
+              <h2>Login</h2>
+              <button id="btn-close" class="cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="inputBox">
+                <input type="text" required="required">
+                <span>Username</span>
+                <i></i>
+              </div>
+              <div class="inputBox">
+                <input type="password" required="required">
+                <span>Password</span>
+                <i></i>
+              </div>
+              <div class="links">
+                <a href="#">
+                  Forgot Password
+                </a>
+                <a href="#">Signup</a>
+              </div>
+              <input class="mt-2" type="submit" value="Login">
+            </div>
+          </div>
+        </div>
+        <!-- Sign up -->
+        <div id="box-signup">
+          <div id="modal-box-signup">
+            <div class="form">
+              <h2>Signup</h2>
+              <button id="btn-close" class="cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="inputBox">
+                <input type="text" required="required">
+                <span>Username</span>
+                <i></i>
+              </div>
+              <div class="inputBox">
+                <input type="password" required="required">
+                <span>Password</span>
+                <i></i>
+              </div>
+              <!-- <div class="links">
+                <a href="#">
+                  Forgot Password
+                </a>
+                <a href="#">Signup</a>
+              </div> -->
+              <input class="mt-8" type="submit" value="Signup">
+            </div>
+          </div>
+        </div>
       </header>
+
+      
 
       <div class="slider w-full max-w-screen-2xl h-[600px] bg-[url('./img/slider-bg.jpeg')] bg-cover bg-no-repeat bg-bottom">
         <div class="w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-40">
@@ -473,5 +534,12 @@
       </footer>
     </div> <!--End content-wrapper #2-->
   </div> <!--End root-->
+
+  <div id="backtop" class="flex justify-center items-center cursor-pointer hidden">
+    <i class="fa-solid fa-chevron-up"></i>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
