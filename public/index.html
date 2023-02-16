@@ -36,12 +36,15 @@
             <li class="lda-top-menu-item">
               <a href="#" class="">StyleGuide</a>
             </li>
-            <li class="lda-top-menu-item lda-top-menu-item-active">
-                <a href="#" target="blank" id="login">Login</a>
+            <li id="login" class="lda-top-menu-item lda-top-menu-item-active">
+                <a href="#">Login</a>
             </li>
-            <li class="lda-top-menu-item">
-                <a href="#" target="blank" id="signup">Signup</a>
+            <li id="signup" class="lda-top-menu-item">
+                <a href="#">Signup</a>
             </li>
+            <li id="user" class="lda-top-menu-item hidden">
+              
+          </li>
           </ul>
 
           <ul class="basis-3/6 lg:basis-1/6 flex justify-end lg:justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium">
@@ -71,12 +74,12 @@
                 <i class="fa-solid fa-xmark"></i>
               </button>
               <div class="inputBox">
-                <input type="text" required="required">
+                <input class="login-user" type="text" required="required">
                 <span>Username</span>
                 <i></i>
               </div>
               <div class="inputBox">
-                <input type="password" required="required">
+                <input class="login-password" type="password" required="required">
                 <span>Password</span>
                 <i></i>
               </div>
@@ -84,9 +87,9 @@
                 <a href="#">
                   Forgot Password
                 </a>
-                <a href="#">Signup</a>
+                <a href="#" class="signup-login">Signup</a>
               </div>
-              <input class="mt-2" type="submit" value="Login">
+              <input class="login-submit mt-2" type="submit" value="Login">
             </div>
           </div>
         </div>
@@ -95,26 +98,20 @@
           <div id="modal-box-signup">
             <div class="form">
               <h2>Signup</h2>
-              <button id="btn-close" class="cursor-pointer">
+              <button id="btn-close-signup" class="cursor-pointer">
                 <i class="fa-solid fa-xmark"></i>
               </button>
               <div class="inputBox">
-                <input type="text" required="required">
+                <input class="signup-user" type="text" required="required">
                 <span>Username</span>
                 <i></i>
               </div>
               <div class="inputBox">
-                <input type="password" required="required">
+                <input class="signup-password" type="password" required="required">
                 <span>Password</span>
                 <i></i>
               </div>
-              <!-- <div class="links">
-                <a href="#">
-                  Forgot Password
-                </a>
-                <a href="#">Signup</a>
-              </div> -->
-              <input class="mt-8" type="submit" value="Signup">
+              <input class="signup-submit mt-8" type="submit" value="Signup">
             </div>
           </div>
         </div>
