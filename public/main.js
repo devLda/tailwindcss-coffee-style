@@ -37,7 +37,10 @@ const btn_login = document.getElementById('login');
 const btn_signup = document.getElementById('signup');
 const box_login = document.getElementById('box-login');
 const box_signup = document.getElementById('box-signup');
-const btn_close = document.getElementById('btn-close');
+const userLogin = document.getElementById('user');
+const signup_login = document.querySelector('.links .signup-login')
+const close_login = document.getElementById('btn-close');
+const close_signup = document.getElementById('btn-close-signup');
 const modal_login = document.getElementById('modal-box-login');
 const modal_signup = document.getElementById('modal-box-signup');
 
@@ -45,16 +48,18 @@ btn_login.addEventListener('click', () => {
   box_login.classList.add('show');
 })
 
-btn_close.addEventListener('click', () => {
+close_login.addEventListener('click', () => {
   box_login.classList.remove('show');
+});
+
+close_signup.addEventListener('click', () => {
   box_signup.classList.remove('show');
 })
 
 box_login.addEventListener('click', (e) => {
-  console.log(e.target)
   if(!modal_login.contains(e.target))
     {
-      btn_close.click();
+      close_login.click();
     } 
 })
 
@@ -66,6 +71,68 @@ box_signup.addEventListener('click', (e) => {
   console.log(e.target)
   if(!modal_signup.contains(e.target))
     {
-      btn_close.click();
+      close_signup.click();
     } 
+})
+
+signup_login.addEventListener('click', () => {
+  close_login.click();
+  btn_signup.click();
+})
+
+const signupUser = document.querySelector('.signup-user');
+const signupPassword = document.querySelector('.signup-password');
+const signupSubmit = document.querySelector('.signup-submit');
+
+signupSubmit.addEventListener('click',(e) => {
+  e.preventDefault();
+  if(signupUser.value === "" || signupPassword.value === "")
+    alert('Vui lòng không để trống');
+  else
+  {
+    const user = {
+      user: signupUser.value,
+      password: signupPassword.value
+    }
+    let json = JSON.stringify(user);
+    localStorage.setItem(signupUser.value,json);
+    alert('Đăng ký thành công');
+    close_signup.click();
+    btn_login.click();
+  }
+})
+
+const loginUser = document.querySelector('.login-user');
+const loginPassword = document.querySelector('.login-password');
+const loginSubmit = document.querySelector('.login-submit');
+
+loginSubmit.addEventListener('click',(e) => {
+  e.preventDefault();
+  if(loginUser.value === "" || loginPassword.value === "")
+    alert('Vui lòng không để trống');
+  else
+  {
+    const user = JSON.parse(localStorage.getItem(loginUser.value));
+    if(user === null)
+    {
+      alert('Tên tài khoản hoặc mật khẩu không chính xác')
+      loginUser.value = '';
+      loginPassword.value = '';
+    }
+    else
+    {
+      if (loginUser.value === user.user && loginPassword.value === user.password)
+      {
+        alert('Đăng nhập thành công');
+        btn_login.classList.add('hidden');
+        btn_signup.classList.add('hidden');
+        userLogin.classList.remove('hidden');
+        userLogin.innerHTML = `Hello  ${user.user}`;
+        close_login.click();
+      }  
+      else
+        alert('Đăng nhập thất bại')
+    }
+    
+  }
 })

@@ -1814,3 +1814,161 @@ input[type="submit"]:active
 {
   opacity: 0.8;
 }
+
+
+/* Responsive Login - Signup */
+@media(min-width: 368px){
+  #modal-box-login,
+  #modal-box-signup
+  {
+    width: 240px;
+    height: 320px;
+  }
+
+  #modal-box-login::before,
+  #modal-box-signup::before
+  {
+    width: 240px;
+    height: 320px;
+  }
+
+  #modal-box-login::after,
+  #modal-box-signup::after
+  {
+    width: 240px;
+    height: 320px;
+  }
+
+  .inputBox{
+    width: 160px;
+    margin-top: 20px;
+  }
+
+  .form
+  {
+    padding: 20px 40px;
+  }
+
+  .form h2 
+  {
+    font-size: 1.5rem;
+  }
+
+  .inputBox span 
+  {
+    font-size: 0.8em;
+  }
+
+  input[type="submit"]
+  {
+    padding: 8px 24px;
+    margin: 0;
+  }
+
+}
+
+@media(min-width: 768px){
+  #modal-box-login,
+  #modal-box-signup
+  {
+    width: 280px;
+    height: 320px;
+  }
+
+  #modal-box-login::before,
+  #modal-box-signup::before
+  {
+    width: 280px;
+    height: 320px;
+  }
+
+  #modal-box-login::after,
+  #modal-box-signup::after
+  {
+    width: 280px;
+    height: 320px;
+  }
+
+
+  .inputBox{
+    width: 160px;
+    margin-top: 20px;
+  }
+
+  .form
+  {
+    padding: 20px 40px;
+  }
+
+  .form h2 
+  {
+    font-size: 1.5rem;
+  }
+
+  .inputBox span 
+  {
+    font-size: 0.8em;
+  }
+
+  input[type="submit"]
+  {
+    padding: 8px 24px;
+    margin: 0;
+  }
+}
+
+@media(min-width: 992px ){
+  #modal-box-login,
+  #modal-box-signup
+  {
+    width: 320px;
+    height: 360px;
+  }
+
+  #modal-box-login::before,
+  #modal-box-signup::before
+  {
+    width: 300px;
+    height: 360px;
+  }
+
+  #modal-box-login::after,
+  #modal-box-signup::after
+  {
+    width: 300px;
+    height: 360px;
+  }
+
+  .inputBox{
+    width: 220px;
+    margin-top: 24px;
+  }
+}
+
+@media(min-width: 1230px){
+  #modal-box-login,
+  #modal-box-signup
+  {
+    width: 380px;
+    height: 420px;
+  }
+
+  #modal-box-login::before,
+  #modal-box-signup::before
+  {
+    width: 380px;
+    height: 420px;
+  }
+
+  #modal-box-login::after,
+  #modal-box-signup::after
+  {
+    width: 380px;
+    height: 420px;
+  }
+
+  .inputBox{
+    width: 300px;
+    margin-top: 28px;
+  }
+}
